@@ -14,18 +14,21 @@ body {
 /* Landing Page */
 .landing-page {
     height: 100vh;
-    background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+    background: #F2F2F2; /* Updated to a more neutral background */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    animation: gradientShift 5s ease infinite;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333;
+    width: 0;
     animation: typing 3s steps(30) forwards;
 }
 
@@ -51,13 +54,12 @@ body {
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    position: relative;
 }
 
 .menu-item:hover {
     transform: scale(1.1) translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    background-color: #feb47b;
+    background-color: #ff7e5f;
 }
 
 .menu-icon {
@@ -86,7 +88,6 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    animation: slideIn 0.5s ease-in-out;
 }
 
 .panel-content {
@@ -98,6 +99,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Project Cards */
 .project-cards {
     display: flex;
     gap: 15px;
@@ -167,20 +169,9 @@ body {
 }
 
 /* Animations */
-@keyframes gradientShift {
-    0% { background: linear-gradient(45deg, #a1c4fd, #c2e9fb); }
-    50% { background: linear-gradient(45deg, #ff9a8b, #ff6a00); }
-    100% { background: linear-gradient(45deg, #a1c4fd, #c2e9fb); }
-}
-
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
 }
 
 /* Responsive Design */
