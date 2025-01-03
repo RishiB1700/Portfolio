@@ -14,7 +14,7 @@ body {
 /* Landing Page */
 .landing-page {
     height: 100vh;
-    background: #F2F2F2; /* Updated to a more neutral background */
+    background: #F2F2F2; /* Neutral color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +25,6 @@ body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #333;
-    width: 0;
     animation: typing 3s steps(30) forwards;
 }
 
@@ -37,7 +33,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Interactive Icons */
+/* Interactive Rectangular Buttons */
 .navigation-menu {
     display: flex;
     gap: 30px;
@@ -48,12 +44,13 @@ body {
 .menu-item {
     padding: 20px;
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    position: relative;
 }
 
 .menu-item:hover {
@@ -62,17 +59,8 @@ body {
     background-color: #ff7e5f;
 }
 
-.menu-icon {
-    font-size: 2.5rem;
-    transition: all 0.3s ease;
-}
-
-.menu-item:hover .menu-icon {
-    transform: scale(1.5) rotate(20deg);
-}
-
 .menu-item p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-top: 5px;
 }
@@ -106,12 +94,17 @@ body {
 }
 
 .project-card {
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     perspective: 1000px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover {
+    transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
@@ -172,6 +165,11 @@ body {
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
 }
 
 /* Responsive Design */
