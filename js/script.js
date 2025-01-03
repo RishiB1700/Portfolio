@@ -8,7 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Sticky header effect
+// Sticky navigation effect
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
@@ -18,12 +18,14 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Section hover-triggered animation (background color change)
-document.querySelectorAll('section').forEach(section => {
-    section.addEventListener('mouseover', () => {
-        section.style.backgroundColor = '#f0f8ff';
+// Hover animation for work section items
+document.querySelectorAll('.work-item').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.style.transform = 'translateY(-10px)';
+        item.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
     });
-    section.addEventListener('mouseout', () => {
-        section.style.backgroundColor = 'white';
+    item.addEventListener('mouseout', () => {
+        item.style.transform = 'translateY(0)';
+        item.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
     });
 });
