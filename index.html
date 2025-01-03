@@ -11,46 +11,44 @@
 <!-- Landing Page -->
 <header class="landing-page">
     <div class="hero-content">
-        <h1 id="typewriter">Hi, I'm Rishi</h1>
-        <p>Welcome to my portfolio. Scroll down to explore my work, experience, and more.</p>
-
-        <!-- Horizontal Scrolling Navigation -->
-        <nav class="horizontal-nav">
-            <a href="#about">About Me</a>
-            <a href="#work">Work</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1 id="heroText">Hey, I'm Rishi</h1>
+        <p class="hero-description">Passionate about digital storytelling, UI design, and strategy. Hover below to explore more.</p>
+        <div class="navigation-menu">
+            <div class="menu-item" id="about" data-section="about">
+                <span class="menu-icon">📜</span>
+                <p>About Me</p>
+            </div>
+            <div class="menu-item" id="work" data-section="work">
+                <span class="menu-icon">💼</span>
+                <p>Work</p>
+            </div>
+            <div class="menu-item" id="projects" data-section="projects">
+                <span class="menu-icon">🎨</span>
+                <p>Projects</p>
+            </div>
+            <div class="menu-item" id="contact" data-section="contact">
+                <span class="menu-icon">📬</span>
+                <p>Contact</p>
+            </div>
+        </div>
     </div>
 </header>
 
-<!-- About Me Section -->
-<section id="about" class="about-me">
-    <h2>About Me</h2>
-    <p>Here's where I share my story, experience, and what drives me to create.</p>
-</section>
+<!-- About Me Scroll Parchment Modal -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <h3>About Me</h3>
+        <div id="scrollParchment" class="scroll-parchment">
+            <button id="openScroll" class="open-scroll-btn">Open Scroll</button>
+        </div>
+        <div id="scrollContent" class="scroll-content">
+            <p>I am a passionate storyteller with a strong foundation in digital strategy and UI/UX design.</p>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+</div>
 
-<!-- Work Section -->
-<section id="work" class="work">
-    <h2>Work</h2>
-    <p>Discover my work experience, internships, and volunteer projects.</p>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects">
-    <h2>Projects</h2>
-    <p>Explore my creative projects and case studies.</p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out!</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Rishi Bhanushali</p>
-</footer>
+<!-- Other Modals and Sections (similar to About Me) will be dynamically created -->
 
 <script src="js/script.js"></script>
 </body>
