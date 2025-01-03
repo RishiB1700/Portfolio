@@ -8,7 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Sticky navigation effect
+// Sticky header effect
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
@@ -18,14 +18,16 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Hover animation for work section items
-document.querySelectorAll('.work-item').forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.style.transform = 'translateY(-10px)';
-        item.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+// Project Modal functionality
+document.querySelectorAll('.modal-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'flex';
     });
-    item.addEventListener('mouseout', () => {
-        item.style.transform = 'translateY(0)';
-        item.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+});
+
+document.querySelectorAll('.close-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        this.closest('.modal').style.display = 'none';
     });
 });
