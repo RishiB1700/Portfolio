@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -19,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
 }
 
 .hero-content h1 {
@@ -35,7 +34,7 @@ body {
 
 .navigation-menu {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -47,11 +46,12 @@ body {
     cursor: pointer;
     position: relative;
     color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item:hover {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     background-color: #feb47b;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .menu-item:hover .menu-icon {
-    transform: rotate(15deg) scale(1.3);
+    transform: rotate(15deg) scale(1.2);
 }
 
 .menu-item p {
