@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
 }
 
 .hero-content h1 {
@@ -70,8 +71,8 @@ body {
     margin-top: 10px;
 }
 
-/* About Me Modal - Scroll Parchment */
-#aboutModal {
+/* Modals */
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -92,6 +93,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* About Me Modal - Scroll Parchment */
 .scroll-parchment {
     display: flex;
     justify-content: center;
