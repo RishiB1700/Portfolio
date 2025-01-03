@@ -1,21 +1,15 @@
-// Handle Menu Item Click and Open Modal
+// Open corresponding panel when menu item is clicked
 document.querySelectorAll('.menu-item').forEach(item => {
     item.addEventListener('click', function () {
         const section = this.getAttribute('data-section');
-        const modal = document.getElementById(section + 'Modal');
-        modal.style.display = 'flex';
+        const panel = document.getElementById(section + 'Panel');
+        panel.style.display = 'flex';
     });
 });
 
-// Open Scroll in About Me Modal
-document.getElementById('openScroll').addEventListener('click', function () {
-    document.getElementById('scrollParchment').style.display = 'none';
-    document.getElementById('scrollContent').style.display = 'block';
-});
-
-// Close Modal
+// Close panel when close button is clicked
 document.querySelectorAll('.close-btn').forEach(button => {
     button.addEventListener('click', function () {
-        this.closest('.modal').style.display = 'none';
+        this.closest('.panel').style.display = 'none';
     });
 });

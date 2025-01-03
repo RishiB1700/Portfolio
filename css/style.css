@@ -14,12 +14,12 @@ body {
 /* Landing Page */
 .landing-page {
     height: 100vh;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(45deg, #36d1dc, #5b86e5);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
-    color: white;
 }
 
 .hero-content h1 {
@@ -35,44 +35,45 @@ body {
 
 .navigation-menu {
     display: flex;
-    gap: 30px;
-    justify-content: center;
+    gap: 40px;
+    position: absolute;
+    bottom: 50px;
 }
 
 .menu-item {
-    padding: 15px 30px;
-    background-color: white;
-    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    position: relative;
     color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .menu-item:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     background-color: #feb47b;
 }
 
 .menu-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: all 0.3s ease;
 }
 
 .menu-item:hover .menu-icon {
-    transform: rotate(15deg) scale(1.2);
+    transform: scale(1.5) rotate(20deg);
 }
 
 .menu-item p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
-/* Modals */
-.modal {
+/* Sliding Panel Styles */
+.panel {
     display: none;
     position: fixed;
     top: 0;
@@ -82,51 +83,16 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    animation: slideIn 0.5s ease-in-out;
 }
 
-.modal-content {
-    background-color: white;
-    padding: 30px;
+.panel-content {
+    background-color: #fff;
+    padding: 40px;
     border-radius: 10px;
     width: 80%;
     max-width: 600px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* About Me Modal - Scroll Parchment */
-.scroll-parchment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('parchment.png') no-repeat center;
-    background-size: cover;
-    height: 200px;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-}
-
-.open-scroll-btn {
-    padding: 10px 20px;
-    background-color: #4A90E2;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.open-scroll-btn:hover {
-    background-color: #333;
-}
-
-.scroll-content {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin-top: 20px;
 }
 
 .close-btn {
@@ -152,6 +118,15 @@ body {
     }
 }
 
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navigation-menu {
@@ -159,7 +134,11 @@ body {
     }
 
     .menu-item {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-icon {
+        font-size: 1.8rem;
     }
 }
