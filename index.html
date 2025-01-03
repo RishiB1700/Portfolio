@@ -12,10 +12,10 @@
 <header class="landing-page">
     <div class="hero-content">
         <h1>Hi, I'm Rishi</h1>
-        <p>Click on the sections below to learn more</p>
+        <p>Click below to discover my story</p>
         <div class="navigation-menu">
             <div class="menu-item" id="about" data-section="about">
-                <span class="menu-icon">👤</span>
+                <span class="menu-icon">📜</span>
                 <p>About Me</p>
             </div>
             <div class="menu-item" id="work" data-section="work">
@@ -34,12 +34,18 @@
     </div>
 </header>
 
-<!-- Modal/Content Popup Example (for About Me) -->
+<!-- Scroll Parchment Reveal for About Me -->
 <div id="aboutModal" class="modal">
     <div class="modal-content">
         <h3>About Me</h3>
-        <p>This is where I tell you about my background, skills, and journey.</p>
-        <button class="close-btn">Close</button>
+        <div id="scrollParchment">
+            <p>Click to open the scroll and learn more about my journey...</p>
+            <button id="openScroll" class="open-scroll-btn">Open Scroll</button>
+        </div>
+        <div id="scrollContent" class="scroll-content">
+            <p>This is where I tell my personal story, from beginning to now.</p>
+            <button class="close-btn">Close</button>
+        </div>
     </div>
 </div>
 
